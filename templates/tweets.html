@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+Z/H - About
+{% endblock %}
+
+    {% block content %}
+
+            
+              <div class="container">
+                  <h2 class="display-4">{{user.name}} Said</h2>
+                  <small>{{user.description}}</small>
+
+                  <ul>
+                      {% for tweet in timeline %}
+                      <li>
+                          <h5>
+                              {{ tweet.created_at}}: <span class="badge badge-danger">{{tweet.favorite_count}} likes</span> <span class="badge badge-primary">{{tweet.retweet_count}} retweets</span>
+                          </h5>  
+                          <p>
+                                {{tweet.full_text}}
+                                <br/>
+                                {% if 'media' in tweet.entities %}
+                                {% for image in tweet.entities['media'] %}
+                                <img src="{{image['media_url']}}" width="200" height="200">
+                                {% endfor %}
+                                {% endif %}
+                          </p> 
+                        </li>
+                      {% endfor %}
+                  </ul>
+
+              </div>
+
+    {% endblock %}  

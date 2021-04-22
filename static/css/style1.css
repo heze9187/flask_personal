@@ -1,0 +1,49 @@
+h1 {
+    color:black;
+    font-size:26px;
+}
+
+body, html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url("../images/index_background.jpg");
+
+    /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  
+  .caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+
+  .about-bg {
+    background-image: url("../images/about_background.jpg");
+
+    /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;    
+  }
